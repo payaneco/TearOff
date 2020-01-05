@@ -76,7 +76,7 @@ def draw_fortune(g, cur_dir):
     print("Draw fortune")
     if not os.path.isfile(cur_dir + "fortune.txt"):
         return
-    with open("fortune.txt", "r", encoding="utf-8") as f:
+    with open(cur_dir + "fortune.txt", "r", encoding="utf-8") as f:
         text = f.read()
         ms = re.findall("^%(.+)$", text, flags=(re.MULTILINE))
         if not ms:

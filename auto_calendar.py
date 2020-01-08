@@ -53,10 +53,11 @@ def draw_weather(g, ken, row):
     #気象庁の明日の天気予報を取得
     print("Draw weather.")
     src = requests.get('http://www.jma.go.jp/jp/yoho/{0}.html'.format(ken)).text
-    if datetime.today().hour < 13:
-        s = "今日"
-    else:
+    hour = datetime.today().hour
+    if (hour < 50) or (hour > 12):
         s = "明日"
+    else:
+        s = "今日"
     th = re.findall('<th class="weather">.*?{}(\d+)日.+? title="(.+?)"(.+?)</table>'.format(s), src, flags=(re.MULTILINE | re.DOTALL))
     day = th[row][0]
     g.text((0, 190), "{}日の天気：".format(day), font = get_font(24), fill = 0)

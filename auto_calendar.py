@@ -92,7 +92,7 @@ def draw_update(g):
     s = "更新日時: {0:%Y-%m-%d %H:%M:%S}".format(now)
     g.text((65, 360), s, font = get_font(14), fill=0)
 
-cur_dir = os.path.dirname(__file__) + os.sep
+cur_dir = os.path.dirname(os.path.abspath(__file__)) + os.sep
 epd = epd7in5.EPD()
 epd.init()
 print("Width: %d, Height: %d" % (epd7in5.EPD_WIDTH, epd7in5.EPD_HEIGHT))

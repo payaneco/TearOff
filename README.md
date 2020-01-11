@@ -10,6 +10,9 @@
 ## auto_calendar.py, startup_calendar.sh, setup.sh
 
 同一リポジトリにコミットされているLICENCEファイルに記載されたMITライセンスに従ってください。
+なお、ソースコード中で気象庁ホームページから情報を取得しています。
+気象庁のデータを二次利用する際は下記のガイドラインに従ってください。
+https://www.jma.go.jp/jma/kishou/info/coment.html
 
 ## epd7in5.py および epdif.py
 
